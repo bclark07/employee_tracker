@@ -1,5 +1,6 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
+
 const Add = require('./lib/create');
 
 var connection = mysql.createConnection({
@@ -16,7 +17,7 @@ connection.connect(function (err) { //starts connection here
     // connection.end(); //have to add async so waits to end?
 });
 
-function CreateEmployee() {
+
     //gets information that we need to add employee info to the data tables
     inquirer.prompt([
         {
@@ -60,6 +61,7 @@ function CreateEmployee() {
            new Add().addEmp(data);
         });
 }
+
 
 
 //allows user to view (READ/SELECT) departments, roles, employees
