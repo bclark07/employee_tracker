@@ -5,7 +5,7 @@ var connection = mysql.createConnection({
     host: 'localhost',
     port: 3306, //make sure this is the port on computer where running this code
     user: 'root',
-    password: 'W@r85ren', //comment this out when push
+    password: '', //comment this out when push
     database: 'employee_tracker'
 });
 
